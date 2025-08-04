@@ -1,0 +1,138 @@
+
+Testar compatibilidade
+
+
+Uso: ações de menu de contexto
+
+
+✅ Padrões recomendados para nome de Script .sh
+
+1. Prefixo acao_
+
+    Ex:
+
+        acao_compress.sh
+
+        acao_convert_to_pdf.sh
+
+        acao_rename_batch.sh
+
+✅ Vantagens: deixa claro que o script é para uma ação personalizada.
+
+
+------------------------------------------------------------------------------------------
+
+Em ambientes KDE (como o KDE Plasma), ações de menu de contexto são opções personalizadas 
+que você adiciona ao menu do botão direito (contexto) no Dolphin, o gerenciador de arquivos 
+do KDE.
+
+
+📌 Exemplo do que são ações de menu de contexto
+
+Quando você clica com o botão direito em um arquivo ou pasta no Dolphin, aparece um menu 
+com opções como:
+
+    Abrir com...
+
+    Enviar para...
+
+    Compactar...
+
+    Mover para o Lixo
+
+Se você criar uma ação de menu personalizada, pode adicionar opções como:
+
+    🔄 "Converter para PDF"
+
+    🎵 "Extrair áudio de vídeo"
+
+    🔐 "Criptografar arquivo"
+
+    📦 "Criar AppImage"
+
+    🧼 "Remover metadados da imagem"
+
+Essas são ações que você define manualmente, geralmente por meio de arquivos .desktop.
+
+⚙️ Como funcionam essas ações no KDE
+
+Essas ações são criadas como "Service Menus" — arquivos .desktop colocados em:
+
+~/.local/share/kservices5/ServiceMenus/
+
+Ou em sistemas mais novos:
+
+~/.local/share/kio/servicemenus/
+
+
+
+🧠 Por que isso é útil?
+
+Porque você pode automatizar tarefas comuns diretamente do Dolphin, sem abrir terminal ou 
+outro programa.
+
+
+Alguns exemplos práticos:
+
+Tarefa	                  Ação no menu de contexto
+
+Redimensionar imagens	 Redimensionar para 1920x1080
+Enviar arquivo via scp	 Enviar para servidor
+Criar ISO de uma pasta	 Criar ISO aqui
+Compactar para .7z	     Compactar como 7z
+
+
+
+
+Você pode baixar scripts para o KDE (especialmente para o Dolphin) de diversos lugares 
+confiáveis. Abaixo estão as principais fontes:
+
+
+🧩 1. KDE Store (store.kde.org) — principal repositório oficial
+
+🔗 https://store.kde.org
+
+
+    Vá para a seção "Dolphin Service Menus":
+
+    👉 https://store.kde.org/browse?cat=102&ord=latest
+
+
+    Ali você encontra centenas de scripts e ações de contexto, como:
+
+        "Extract Here (with icons)"
+
+        "Resize Images"
+
+        "Open in VS Code"
+
+        "Send via Bluetooth"
+
+        etc.
+
+🧰 Os scripts vêm como arquivos .desktop, .sh, .tar.gz ou .zip. Normalmente, há instruções 
+de instalação junto.
+
+
+------------------------------------------------------------------------------------------
+
+
+Os scripts foram adaptados para usa em outros gerenciadores de arquivo que não seja o 
+Dolphin do KDE Plasma 6.4.3:
+
+
+* Converter imagens para PDF
+* Converter PDF para JPG
+* Otimizar PDF
+* Gera uma lista de hash escolhidos
+* Verifica hash com arquivo checksum txt
+* Multiplas imagens para multiplos PDFs
+* Escanear com Clamav
+* Verificar permissao
+
+
+------------------------------------------------------------------------------------------
+
+
+
+

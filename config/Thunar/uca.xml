@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Abrir terminal aqui</name>
+	<submenu></submenu>
+	<unique-id>1710660899193241-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Exemplo de uma ação personalizada</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>audio-speakers</icon>
+	<name>Baixar áudio de vídeo da internet</name>
+	<submenu></submenu>
+	<unique-id>1710661091291769-2</unique-id>
+	<command>/usr/local/bin/yaudio.sh</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/usr/share/icons/extras/youtube1.png</icon>
+	<name>Baixar vídeos da internet</name>
+	<submenu></submenu>
+	<unique-id>1717487544528350-1</unique-id>
+	<command>/usr/local/bin/baixar-videos.sh</command>
+	<description>Baixar trechos de lives e vídeos da Twitch e do YouTube</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>printer-printing</icon>
+	<name>Imprimir</name>
+	<submenu></submenu>
+	<unique-id>1710783750705552-1</unique-id>
+	<command>/usr/local/bin/imprimir.sh %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Extrair aqui...</name>
+	<submenu></submenu>
+	<unique-id>1713761004269012-1</unique-id>
+	<command>/usr/local/bin/extrair.sh %f 2&gt; error</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.tar.gz;*.rar;*.zip;*.tgz;*.tar;*.tar.bz2;*.deb;*.tar.xz;*.rpm;*.AppImage;*.bz2;*.xz;*.xbps;*.dmg</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>audio-flac</icon>
+	<name>Cortar audio</name>
+	<submenu></submenu>
+	<unique-id>1714064598954921-1</unique-id>
+	<command>/usr/local/bin/yaudio.sh %N</command>
+	<description>Cortar arquivos de áudio usando o ffmpeg.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon>folder</icon>
+	<name>Abrir como Root - X11</name>
+	<submenu></submenu>
+	<unique-id>1716168879667549-2</unique-id>
+	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY dbus-launch thunar %f</command>
+	<description>Abrir diretório como Root</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/usr/share/icons/hicolor/48x48/apps/org.xfce.terminal.png</icon>
+	<name>Abrir como Root - Gedit</name>
+	<submenu></submenu>
+	<unique-id>1717871002206980-1</unique-id>
+	<command>gedit admin://%F</command>
+	<description>Abrir o arquivo como Root</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>preferences-desktop-sound</icon>
+	<name>Extrair audio</name>
+	<submenu></submenu>
+	<unique-id>1717994900465277-1</unique-id>
+	<command>xfce4-terminal --maximize --title=&quot;Extraindo audio do vídeo&quot; -e &quot;/usr/local/bin/yaudio.sh %F &amp;&amp; sleep 50&quot;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>image-gif</icon>
+	<name>Converter vídeo em GIF</name>
+	<submenu></submenu>
+	<unique-id>1718836440866010-1</unique-id>
+	<command>/usr/local/bin/video-gif.sh</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>applications-multimedia</icon>
+	<name>ver codecs</name>
+	<submenu></submenu>
+	<unique-id>1719504739800312-1</unique-id>
+	<command>/usr/local/bin/ver-codecs.sh %n</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>multimedia-video-player</icon>
+	<name>Utilizario para vídeo</name>
+	<submenu></submenu>
+	<unique-id>1719692219000489-1</unique-id>
+	<command>xfce4-terminal --maximize --title=&quot;Gravar a área de trabalho com o FFmpeg...&quot; -e &quot;/usr/local/bin/yvideo.sh&quot;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Pluma como Root</name>
+	<submenu></submenu>
+	<unique-id>1719838762138164-1</unique-id>
+	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY pluma %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Renomea os arquivos</name>
+	<submenu></submenu>
+	<unique-id>1719887591816399-1</unique-id>
+	<command>xterm -e &apos;/usr/local/bin/renomear.sh&apos;</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>gmusicbrowser</icon>
+	<name>Gerar lista de músicas - .m3u</name>
+	<submenu></submenu>
+	<unique-id>1719958813831309-1</unique-id>
+	<command>/usr/local/bin/gera-lista-musica.sh %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Buscar arquivos duplicados - fdupes</name>
+	<submenu></submenu>
+	<unique-id>1720108977064568-1</unique-id>
+	<command>/usr/local/bin/arquivos-duplicados.sh %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>org.gnome.Meld</icon>
+	<name>Comparar</name>
+	<submenu></submenu>
+	<unique-id>1720454788675535-1</unique-id>
+	<command>meld %F</command>
+	<description>Comparar arquivos e diretório com Meld</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/extras/clamav.png</icon>
+	<name>Clamav</name>
+	<submenu></submenu>
+	<unique-id>1720869672694089-1</unique-id>
+	<command>/usr/local/bin/Scan\ clamAV-thunar.sh %F</command>
+	<description>Escanear com antivírus Clamav</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>edit-find-replace</icon>
+	<name>Procurar</name>
+	<submenu></submenu>
+	<unique-id>1720942144712793-1</unique-id>
+	<command>catfish --path=%f</command>
+	<description>localizar arquivos e pastas</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>audio-volume-muted-blocking-panel</icon>
+	<name>Remove áudio do vídeo</name>
+	<submenu></submenu>
+	<unique-id>1722316957414173-1</unique-id>
+	<command>xfce4-terminal --title=&quot;Removendo áudio...&quot; -e &quot;remover-audio.sh %f 2&gt; error.log&quot;</command>
+	<description>xfce4-terminal --title=&quot;Removemdo áudio do vídeo...&quot;  -e &apos;ffmpeg -i &quot;%n&quot; -vcodec copy -an sem-audio-&quot;%n&quot;&apos;</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>multimedia-audio-player</icon>
+	<name>Converter M4A em MP3</name>
+	<submenu></submenu>
+	<unique-id>1722386437626415-1</unique-id>
+	<command>xterm -T &quot;Convertendo para MP3...&quot; -e &apos;ffmpeg -i &quot;%n&quot; -acodec libmp3lame &quot;%n&quot;.mp3&apos;</command>
+	<description>Utilizando FFmpeg para converter arquivo de áudio.</description>
+	<range>*</range>
+	<patterns>*.m4a</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon>audio-flac</icon>
+	<name>Extrair áudio para opus</name>
+	<submenu></submenu>
+	<unique-id>1722694607149777-1</unique-id>
+	<command>xterm -fa &apos;Monospace&apos; -fs 10 -geometry 200x50+200+100 -bg lightyellow -fg darkblue -T &quot;Convertendo para opus...&quot; -e &quot;ffmpeg -i  %n  -vn -acodec copy -y  %n.opus 2&gt;error.log&quot;</command>
+	<description>Extra áudio para opus usando o FFmpeg</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Converter WebP para PNG</name>
+	<submenu></submenu>
+	<unique-id>1727315560296654-1</unique-id>
+	<command>dwebp %F -o %F.png</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.webp</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>mail-send</icon>
+	<name>Anexar no Thunderbird</name>
+	<submenu></submenu>
+	<unique-id>1733973284188210-1</unique-id>
+	<command>/usr/local/bin/enviar-para-thunderbird.sh %F</command>
+	<description>Anexa o arquivo selecionado diretamente no Thunderbird para composição de e-mail.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Abrir Terminal aqui como Root</name>
+	<submenu></submenu>
+	<unique-id>1736195518398161-1</unique-id>
+	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY xfce4-terminal --working-directory=%f</command>
+	<description>Abra o terminal como Root no diretório atual.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Converter imagem em arquivo PDF</name>
+	<submenu></submenu>
+	<unique-id>1739154119399336-1</unique-id>
+	<command>convert %N %N.pdf</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Extrair o conteúdo do arquivo .mo</name>
+	<submenu></submenu>
+	<unique-id>1739843496759866-1</unique-id>
+	<command>msgunfmt %N -o %N.po</command>
+	<description>Use o comando msgunfmt para converter o arquivo .mo em .po</description>
+	<range>*</range>
+	<patterns>*.mo</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Gerar o arquivo de tradução .pot</name>
+	<submenu></submenu>
+	<unique-id>1739845464891051-2</unique-id>
+	<command>xgettext --from-code=UTF-8 -o %f.pot %f</command>
+	<description>Isso criará um arquivo .pot que contém todas as strings de texto que podem ser traduzidas.</description>
+	<range>*</range>
+	<patterns>*.sh</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Converter .pot em .mo</name>
+	<submenu></submenu>
+	<unique-id>1739892250370165-1</unique-id>
+	<command>msgfmt %N -o %N.mo 2&gt; erro.log</command>
+	<description>Gerar o arquivo .mo a partir do arquivo .pot</description>
+	<range>*</range>
+	<patterns>*.pot</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>application-x-shellscript</icon>
+	<name>Gera o arquivo .pot</name>
+	<submenu></submenu>
+	<unique-id>1740426727036779-1</unique-id>
+	<command>xgettext -o %N.pot -L Shell -k_ -kgettext --from-code=UTF-8 %N 2&gt; erro.log</command>
+	<description>Para gerar um arquivo .pot (Portable Object Template) a partir de um script .sh, você pode usar a ferramenta xgettext.</description>
+	<range>*</range>
+	<patterns>*.sh</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Exibir informações do arquivo</name>
+	<submenu></submenu>
+	<unique-id>1741034990848502-1</unique-id>
+	<command>yad --center --title=&quot;Informações do Arquivo&quot; --width=900 --height=400 --text=&quot;$(ls -lh %f ; echo &quot;\n\n&quot; ; file %f ; echo &quot;\nMetadados do arquivo: \n&quot; ; exiftool %f)&quot;</command>
+	<description>O Thunar não mostra o horario  dos arquivos recem criados.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>user-trash</icon>
+	<name>Remover pasta de Forma Segura</name>
+	<submenu></submenu>
+	<unique-id>1742230075404554-1</unique-id>
+	<command>bash -c &quot;yad --center --question --text=&apos;Tem certeza que deseja excluir esta pasta %n de forma segura?&apos; &amp;&amp; find %f -type f -exec shred -u {} \; &amp;&amp; rm -r %f&quot;</command>
+	<description>Encontra todos os arquivos dentro da pasta selecionada e os sobrescreve de forma segura com o comando shred -u.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Paplay</name>
+	<submenu></submenu>
+	<unique-id>1742485431698221-1</unique-id>
+	<command>paplay %n</command>
+	<description>O paplay é uma ferramenta simples e leve para reproduzir arquivos de áudio através do PulseAudio, o sistema de gerenciamento de som padrão em muitas distribuições Linux. Ele é projetado para ser rápido e eficiente, permitindo que você execute rapidamente a reprodução de arquivos de áudio diretamente do terminal.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon>audio-x-generic</icon>
+	<name>Converter .oga para .ogg</name>
+	<submenu></submenu>
+	<unique-id>1742486679949743-1</unique-id>
+	<command>ffmpeg -i %f %n.ogg</command>
+	<description>Esta ação permite converter rapidamente arquivos de áudio no formato .oga para .ogg utilizando o ffmpeg. Ao clicar com o botão direito do mouse em um arquivo .oga e selecionar essa ação, o arquivo será convertido para o formato .ogg no mesmo diretório, mantendo o mesmo nome, mas com a nova extensão .ogg.</description>
+	<range>*</range>
+	<patterns>*.oga</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Reproduzir .oga no QMMP</name>
+	<submenu></submenu>
+	<unique-id>1742490119102516-1</unique-id>
+	<command>/usr/local/bin/reproduzir_oga_qmmp.sh %f</command>
+	<description>Renomeia .oga para .ogg e o reproduz no QMMP.</description>
+	<range>*</range>
+	<patterns>*.oga</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Verificar Hashes</name>
+	<submenu></submenu>
+	<unique-id>1744520518479582-1</unique-id>
+	<command>/usr/local/bin/calcular_hashes.sh  %F</command>
+	<description>Calcula MD5, SHA1, SHA256 e SHA512 com YAD</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Compilar o seu código em .c</name>
+	<submenu></submenu>
+	<unique-id>1745587758540000-1</unique-id>
+	<command>gcc %f -o %f-1 2&gt;erro.log</command>
+	<description>Usa o gcc </description>
+	<range>*</range>
+	<patterns>*.c;*.C</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Convertendo imagens e documentos em texto puro (.txt)</name>
+	<submenu></submenu>
+	<unique-id>1745591646188750-1</unique-id>
+	<command>tesseract -l por %f %f.txt  2&gt;erro.txt</command>
+	<description>tesseract --list-langs</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>system-file-manager</icon>
+	<name>Abrir como administrador</name>
+	<submenu></submenu>
+	<unique-id>1746288764029897-1</unique-id>
+	<command>thunar admin://%f</command>
+	<description>Abre a pasta com permissões de root usando admin://</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>mediainfo-gui</icon>
+	<name>Mediainfo</name>
+	<submenu></submenu>
+	<unique-id>1746678224741143-1</unique-id>
+	<command>mediainfo-gui %n</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Abrir como Root - Pluma via Wayland</name>
+	<submenu></submenu>
+	<unique-id>1746748060216595-1</unique-id>
+	<command>pluma admin://%F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>system-file-manager</icon>
+	<name>Atualizar - Se usar várias vezes, trava o Thunar.</name>
+	<submenu></submenu>
+	<unique-id>1747501957478023-1</unique-id>
+	<command></command>
+	<description>wtype -M ctrl r &amp;&amp; sleep 1 &amp;&amp; notify-send  -i Thunar  -t 5000  &quot;Notificação&quot; &quot;Pasta %d recarregada...&quot;   Recarrega a visualização no Thunar. Isso simula o atalho de teclado Ctrl + R  Requer que o wtype esteja instalado (ferramenta de simulação de entrada para Wayland).</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Marcar como executavel</name>
+	<submenu></submenu>
+	<unique-id>1748201991794466-1</unique-id>
+	<command>chmod +x %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.sh</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Converter .m4r para .mp3</name>
+	<submenu></submenu>
+	<unique-id>1749144066292498-1</unique-id>
+	<command>ffmpeg -i %N -acodec libmp3lame -ab 192k %N.mp3</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.m4r</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Converter  .amr em .mp3</name>
+	<submenu></submenu>
+	<unique-id>1749144420798464-2</unique-id>
+	<command>ffmpeg -i %N %N.mp3</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.amr</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon>org.avidemux.Avidemux</icon>
+	<name>Juntar Vídeos</name>
+	<submenu></submenu>
+	<unique-id>1749484182150760-1</unique-id>
+	<command>bash -c &apos;inputs=&quot;&quot;; filters=&quot;&quot;; idx=0; for f in &quot;$@&quot;; do inputs=&quot;$inputs -i \&quot;$f\&quot;&quot;; filters=&quot;${filters}[$idx:v:0][$idx:a:0]&quot;; idx=$((idx + 1)); done; filters=&quot;${filters}concat=n=$idx:v=1:a=1[outv][outa]&quot;; eval ffmpeg $inputs -filter_complex \&quot;$filters\&quot; -map \&quot;[outv]\&quot; -map \&quot;[outa]\&quot; -y video_final.mp4; notify-send \&quot;Vídeos unidos em video_final.mp4\&quot;&apos; bash %F</command>
+	<description>Junta vídeos selecionados em um único arquivo. - Esta cortando parte dos vdeos</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>multimedia-audio-player</icon>
+	<name>Extrair áudio - m4a</name>
+	<submenu></submenu>
+	<unique-id>1749748959287101-1</unique-id>
+	<command>ffmpeg -i %n -vn -acodec copy -y %n_audio.m4a &amp;&amp; notify-send &quot;Áudio extraído&quot; &quot;Arquivo: %n_audio.m4a&quot;</command>
+	<description>Extrair áudio do vídeo usando ffmpeg.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>org.avidemux.Avidemux</icon>
+	<name>cortar video</name>
+	<submenu></submenu>
+	<unique-id>1750520581386954-1</unique-id>
+	<command>cortar_video.sh</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>audio-flac</icon>
+	<name>Extrair o audio do video</name>
+	<submenu></submenu>
+	<unique-id>1750975941727219-1</unique-id>
+	<command>/usr/local/bin/extrair_audio_auto.sh %N</command>
+	<description>Script que detecta o melhor formato automaticamente</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>edit-find</icon>
+	<name>Procurar palavra ou frase em arquivos</name>
+	<submenu></submenu>
+	<unique-id>1752430956496707-1</unique-id>
+	<command>bash -c &apos;BUSCA=$(yad --center --entry --title=&quot;Buscar em arquivos&quot; --text=&quot;Digite a palavra ou frase para buscar:&quot; --width=&quot;400&quot; ); [ -n &quot;$BUSCA&quot; ] &amp;&amp; grep -Rnwi &quot;$BUSCA&quot; &quot;%f&quot; | yad --center --text-info --title=&quot;Resultados da busca por: $BUSCA&quot; --width=&quot;900&quot; --height=&quot;700&quot;&apos;</command>
+	<description>Procura uma palavra ou frase dentro de todos os arquivos desta pasta e subpastas - xfce4-terminal -e &quot;bash -c &apos;read -p \&quot;Digite a string para buscar: \&quot; s; grep -Rnwi \&quot;\$s\&quot; \&quot;%f\&quot;; echo -e \&quot;\nPressione Enter para sair...\&quot;; read&apos;&quot;</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>preferences-desktop-wallpaper</icon>
+	<name>Definir como wallpaper (Sway)</name>
+	<submenu></submenu>
+	<unique-id>1752880791122947-1</unique-id>
+	<command>/usr/local/bin/set-wallpaper-sway.sh %f</command>
+	<description>Usa swaybg para definir o papel de parede.</description>
+	<range>*</range>
+	<patterns>*.png;*.jpg;*.jpeg;*.bmp;*.gif;*.tiff;*.webp</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>emblem-photos</icon>
+	<name>Converter imagens para PDF</name>
+	<submenu></submenu>
+	<unique-id>1754165541955160-1</unique-id>
+	<command>/usr/local/bin/acao_converter-imagens-para-PDF.sh %N</command>
+	<description>Converter grupo de imagens para PDF.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>application-pdf</icon>
+	<name>Converter PDF para JPG</name>
+	<submenu></submenu>
+	<unique-id>1754165778236363-2</unique-id>
+	<command>/usr/local/bin/acao_converter-para-JPG.sh %N</command>
+	<description>Converter PDF para JPG.</description>
+	<range>*</range>
+	<patterns>*.pdf;*.PDF</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>application-pdf</icon>
+	<name>Otimizar arquivos PDF</name>
+	<submenu></submenu>
+	<unique-id>1754166073892518-1</unique-id>
+	<command>/usr/local/bin/acao_otimizar-pdf.sh %N</command>
+	<description>Otimizar arquivos PDF.</description>
+	<range>*</range>
+	<patterns>*.pdf;*.PDF</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>selection-checked</icon>
+	<name>Gera uma lista de hash dos arquivos</name>
+	<submenu></submenu>
+	<unique-id>1754166283197240-2</unique-id>
+	<command>/usr/local/bin/acao_checksum.sh %N</command>
+	<description>Gera uma lista de hash dos arquivos escolhidos</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Verifica hash</name>
+	<submenu></submenu>
+	<unique-id>1754181655700996-1</unique-id>
+	<command>/usr/local/bin/acao_verificar-hash.sh %n</command>
+	<description>Verifica hash com arquivo checksum</description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+<action>
+	<icon></icon>
+	<name>Converter  imagens para PDFs</name>
+	<submenu></submenu>
+	<unique-id>1754181866542374-2</unique-id>
+	<command>/usr/local/bin/acao_multiplos_PDFs.sh %N</command>
+	<description>Converter multiplas imagens para multiplos PDFs</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>system-users</icon>
+	<name>Verificar permissao do arquivo</name>
+	<submenu></submenu>
+	<unique-id>1754182125072579-3</unique-id>
+	<command>/usr/local/bin/acao_permissao.sh %N</command>
+	<description>Verificar permissao legíveis para humanos.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+</actions>
