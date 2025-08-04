@@ -9,3 +9,6 @@ Testado no Thunar.
 
 $ mv -i config ~/.config <br>
 $ sudo mv -i usr  /
+
+As opções do KDE são aplicadas a todos os usuários do sistema.
+Somente o Thunar usa configurações específicas por usuário.
