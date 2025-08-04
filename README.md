@@ -7,5 +7,5 @@ Testado no Thunar.
 
 # Instalação:
 
-$ mv -i config ~/.config
+$ mv -i config ~/.config <br>
 $ sudo mv -i usr  /
