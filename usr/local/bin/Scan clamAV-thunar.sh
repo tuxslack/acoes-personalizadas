@@ -14,7 +14,7 @@
 # https://pt.linux-console.net/?p=11675
 
 
-logo="$HOME/.icons/extras/clamav.png"
+logo="/usr/share/icons/extras/clamav.png"
 
 # ----------------------------------------------------------------------------------------
 
@@ -80,6 +80,7 @@ clamscan --max-scansize=4000M --max-filesize=4000M -l /tmp/clamav.log -r -v   "$
         --progress \
         --title "ClamAV" \
         --height="100" --width="500" \
+        --buttons-layout=center \
         --button=Cancelar:252 \
         --button=OK:0 \
         --progress-text="Escaneando arquivos..." \
@@ -119,6 +120,7 @@ cat /tmp/clamav.log | yad \
 --title "Resultados da verificação do ClamAV" \
 --text-info \
 --fontname "mono 10" \
+--buttons-layout=center \
 --button=Cancelar:252 \
 --button=OK:0 \
 --width="1200" --height="900"  \
