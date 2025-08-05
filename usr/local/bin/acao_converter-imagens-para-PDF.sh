@@ -50,7 +50,7 @@ fi
 
 # Solicita o nome do arquivo
 
-nomedoarquivo=$(yad --center --entry --title="Input dialog" --text="Insira o nome do arquivo:" 2>/dev/null)
+nomedoarquivo=$(yad --center --entry --title="Input dialog" --text="Insira o nome do arquivo:" --entry-text "nomepadrão" 2>/dev/null)
 
 
 # Define nome de saída

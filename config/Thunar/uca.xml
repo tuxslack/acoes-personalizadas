@@ -631,8 +631,11 @@
 	<description>Gera uma lista de hash dos arquivos escolhidos</description>
 	<range>*</range>
 	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
 	<other-files/>
 	<text-files/>
+	<video-files/>
 </action>
 <action>
 	<icon></icon>

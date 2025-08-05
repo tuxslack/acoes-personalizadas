@@ -73,7 +73,7 @@ hash=$(yad \
   --buttons-layout=center \
   --button=OK:0  \
   --height="200" --width="400" \
-  2>/dev/null | awk '{print $1}')
+  2>/dev/null | awk '{print $2}')
 
 if [ -z "$hash" ]; then
 

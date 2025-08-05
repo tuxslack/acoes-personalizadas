@@ -35,32 +35,37 @@ fi
 
 hash=("md5sum" "sha256sum" "sha512sum")
 
+
+# Gera o conteúdo de hash em uma variável
+
+output=""
+
 for i in "${hash[@]}"; do
 
-    echo "#####################[ $i ]#####################" | tr '[a-z]' '[A-Z]'
+    output+="##################### [ ${i^^} ] #####################\n\n"
 
-    $i "$@"
+    output+="$($i "$@")\n\n"
 
-done > /tmp/khash.txt
+done 
 
 # ----------------------------------------------------------------------------------------
 
-# Exibe o resultado em uma janela com yad
+# Gera o arquivo hashes.txt
 
-yad --center \
-    --text-info \
-    --title="Resultado dos Hashes" \
-    --filename="/tmp/khash.txt" \
+echo -e "$output" > hashes.txt
+
+# ----------------------------------------------------------------------------------------
+
+# Exibe a saída com yad
+
+echo -e "$output" | yad \
+    --center \
     --buttons-layout=center \
     --button=Fechar:0 \
     --width="1024" --height="600" \
-    2>/dev/null
+    --text-info \
+    --title="Verificando hash... de $(for i in "$@"; do echo "$i"; done | wc -l) arquivo(s)"
 
-# ----------------------------------------------------------------------------------------
-
-# Apaga os arquivos temporários criados
-
-rm -f /tmp/khash.txt
 
 # ----------------------------------------------------------------------------------------
 
