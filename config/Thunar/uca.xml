@@ -674,4 +674,15 @@
 	<text-files/>
 	<video-files/>
 </action>
+<action>
+	<icon>application-pdf</icon>
+	<name>Converter PDF para odt ou texto</name>
+	<submenu></submenu>
+	<unique-id>1754460655167356-1</unique-id>
+	<command>/usr/local/bin/acao_pdf_para_odt_ou_texto.sh %N</command>
+	<description>Faz uma conversão de arquivos PDF para os formatos ODT ou texto.</description>
+	<range>*</range>
+	<patterns>*.pdf;*.PDF</patterns>
+	<other-files/>
+</action>
 </actions>
